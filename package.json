@@ -23,6 +23,7 @@
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.1.1",
     "jest": "^24.9.0",
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.3",
+    "supertest": "^4.0.2"
   }
 }
