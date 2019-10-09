@@ -23,7 +23,7 @@ app.use(async (req, res, next) => {
   if (req.headers['x-access-token']) {
     const accessToken = req.headers['x-access-token']
     const { userId, exp } = await jwt.verify(accessToken, process.env.JWT_SECRET)
-    
+
     //Check if token has expired
     if (exp < Date.now().valueOf() / 1000) {
       return res.status(401).json({
@@ -42,7 +42,7 @@ app.use('/', routes)
 
 const runServer = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/rbac', {
+    await mongoose.connect(process.env.MONGODB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
