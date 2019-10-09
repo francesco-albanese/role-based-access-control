@@ -16,9 +16,7 @@ To login and signup users I am using jsonwebtoken and passwords are hashed using
 
 ## Todo
 
-```
 - [x] add unit tests for User model
 - [ ] add unit tests for controllers
 - [ ] add unit tests for middlewares
 - [ ] add typescript
-```
